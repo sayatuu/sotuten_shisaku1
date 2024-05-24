@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+<img id="gazou" img src="images/slime_off.jpg" onclick="this.src='images/slime.GIF'" alt="" width="500" height="500">
+
+
+<audio id="oto">
+    <source src="audio/slime_shisaku.mp3">
+</audio>
+<script>
+    (a => {
+    a.oncanplaythrough = () => {
+    document.getElementById('gazou').addEventListener('click', ()=>{a.play()});
+    };
+    })(new Audio("./audio/slime_shisaku.mp3"));
+    </script>
+
+<script type="text/javascript" src="gifffer.min.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+  Gifffer();
+}
+</script>
+    
